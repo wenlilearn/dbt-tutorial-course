@@ -1,0 +1,27 @@
+models:
+  - name: stg_ecommerce__products
+    description: ""
+    columns:
+      - name: product_id
+        tests:
+          - not_null
+          - unique
+
+      - name: cost
+        tests:
+          - not_null
+
+      - name: retail_price
+        description: "How much the product is sold for"
+        tests:
+          - not_null
+
+      - name: department
+        description: "whether the product is a grocery item or not"
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['Men', 'Women']
+              quote: true
+              
+
