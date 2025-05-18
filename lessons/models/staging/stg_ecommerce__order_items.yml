@@ -27,6 +27,6 @@ models:
               to: ref('stg_ecommerce__products')
               field: product_id
 
-      - name: sale_price
+      - name: item_sale_price
         tests:
           - not_null
